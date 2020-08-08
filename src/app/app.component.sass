@@ -105,52 +105,63 @@ $primaryColor: #a6c6de
 #movement-keys
   z-index: 3
   position: relative
-  left: 400px
+  left: 470px
+  top: 20px
   width: fit-content
+  button
+    padding: 12px 7px 12px 1px
+    position: absolute
+    line-height: 0
+    border-radius: 0 8px 8px 0
+    border: solid 2px #22222244
+    border-left: 0px
+    display: inline-flex
+    cursor: pointer
+    color: #777777
+    font-weight: bolder
+    background-color: #dddddd
 
-#movement-keys >button
-  padding: 12px 7px 12px 1px
-  position: relative
-  line-height: 0
-  border-radius: 0 8px 8px 0
-  border: solid 2px #22222244
-  border-left: 0px
-  display: inline-flex
-  cursor: pointer
+#movement-keys > button:hover
+  background-color: #eeeeee
 
 #movement-keys > div
   position: relative
-  left: 19px
-  width: 50px
-  height: 47px
-  top: -38px
+  width: 56px
+  height: 56px
   background-color: #dddddd
 
 #up-button
   transform: rotateZ(270deg) scale(2)
-  top: -40px
-  left: 35px
+  top: -33px
+  left: 19px
+  box-shadow: 0 1px 2px rgba(0,0,0,0.4), 0 2px 4px rgba(0,0,0,0.1), 0 4px 16px rgba(0,0,0, 0.2)
 
 #right-button
   transform: scale(2)
   padding: 10px 4px 10px 4px
-  left: 60px
+  left: 65px
+  top: 14px
+  box-shadow: 0 1px 2px rgba(0,0,0,0.4), 0 2px 4px rgba(0,0,0,0.1), 0 4px 16px rgba(0,0,0, 0.2)
+
 
 #left-button
   transform: rotateZ(180deg) scale(2)
-  right: 60px
+  right: 65px
+  top: 14px
+  box-shadow: 0 -1px 2px rgba(0,0,0,0.4), 0 -2px 4px rgba(0,0,0,0.1), 0 -4px 16px rgba(0,0,0, 0.2)
 
 #down-button
   transform: rotateZ(90deg) scale(2)
-  bottom: -40px
-
+  bottom: -33px
+  left: 19px
+  box-shadow: 0 -1px 2px rgba(0,0,0,0.4), 0 -2px 4px rgba(0,0,0,0.1), 0 -4px 16px rgba(0,0,0, 0.2)
 #name
   margin-top: 10px
-#name > input
-  background: #77777744
-  border: 2px solid #77777766
-  border-radius: 10px
-  padding: 8px
+  input
+    background: #77777744
+    border: 2px solid #77777766
+    border-radius: 10px
+    padding: 8px
 
 #power
   display: flex
@@ -159,30 +170,24 @@ $primaryColor: #a6c6de
   height: 300px
   background-color: #000000ee
   border-radius: 10px
+
 #powerbtn
   position: absolute
-  margin-left: 548px
-  margin-top: -6px
+  margin-left: 550px
+  margin-top: -36px
+  img
+    width: 32px
+    display: inline-flex
+    background-color: #00000044
+    padding: 4px
+    border: 1px solid #00000033
+    box-shadow: 0 4px 2px rgba(255, 255, 255, 0.5) inset, 0 9px 21px rgba(0, 0, 0, 0.1) inset
+    border-radius: 0 0 10px 10px
+    cursor: pointer
+  img:hover
+    background-color: #00000077
 
-#powerbtn > img
-  width: 32px
-  display: inline-flex
-  background-color: #00000022
-  padding: 4px
-  border: 1px solid #00000033
-  border-radius: 0 0 10px 10px
-  cursor: pointer
-#powerbtn > img:hover
-  background-color: #00000044
-  border: 1px solid #00000055
-#snake-wrapper > .active
-  display: none
-#snake-wrapper > h3
-  position: absolute
-  z-index: 3
-  margin: -27px 0px 0 215px
-  color: #00000044
-  font-size: x-large
+
 #score
   margin-left: 16px
 #snake
@@ -194,6 +199,16 @@ $primaryColor: #a6c6de
 
 #snake-wrapper
   overflow: hidden
+  .active
+    display: none
+  h3
+    position: absolute
+    z-index: 3
+    margin: -27px 0px 0 215px
+    color: #00000044
+    font-size: x-large
+    text-shadow: -2px -2px rgba(255,255,255,0.5)
+
 #start
   height: 300px
   display: inline-flex
@@ -203,22 +218,20 @@ $primaryColor: #a6c6de
   border-radius: 8px
   width: 600px
   cursor: pointer
-
-#start > h1
-  margin: auto
-  font-family: monospace
-  width: 100%
-  font-size: xx-large
-  border: #a6c6de44 1px solid
-  border-radius: 5px
-
-#start > h3
-  position: absolute
-  top: 184px
-  width: 100%
-  font-family: monospace
-  border: #a6c6de44 1px solid
-  border-radius: 5px
+  h1
+    margin: auto
+    font-family: monospace
+    width: 100%
+    font-size: xx-large
+    border: #a6c6de44 1px solid
+    border-radius: 5px
+  h3
+    position: absolute
+    top: 184px
+    width: 100%
+    font-family: monospace
+    border: #a6c6de44 1px solid
+    border-radius: 5px
 
 .font
   font-size: x-large
